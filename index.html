@@ -33,7 +33,7 @@
     <div class="container nav">
       <a href="#home" aria-label="ID+EA Home"><img class="logo" src="assets/idea-logo.png" alt="ID+EA Tech-Enabled Construction Company"></a>
       <nav class="navlinks" aria-label="Main navigation">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#tracking">Tech Tracking</a><a href="reports.html">Reports</a><a href="#contact">Contact</a>
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#tracking">Tech Tracking</a><a href="#reports">Reports</a><a href="#contact">Contact</a>
       </nav>
       <a class="btn darkbtn" href="tel:+919951929950">Call Now →</a>
     </div>
@@ -131,19 +131,950 @@
 
   <section class="section white" id="reports">
     <div class="container">
-      <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
-        <div>
-          <div class="label"><span class="dot"></span>Reports</div>
-          <h2 class="section-title" style="font-size:clamp(32px,4vw,48px)">Daily Site Reports</h2>
-          <p class="lead">Create, save, print and share structured daily site work reports covering operations, materials, expenses and site remarks.</p>
-        </div>
-        <a class="btn orange" href="reports.html">Open Daily Reports →</a>
-      </div>
+      <div class="label"><span class="dot"></span>Reports</div>
+      <h2 class="section-title">Daily Site Reports</h2>
+      <p class="lead" style="max-width:820px">Create, save, print and share structured daily site reports covering site operations, material orders, daily expenses and remarks.</p>
+      <iframe title="ID+EA Daily Site Report" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;ID+EA | Daily Site Report&lt;/title&gt;
+  
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+  &lt;style&gt;
+    /* Import Montserrat Font in CSS */
+    @import url(&#x27;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap&#x27;);
+
+    /* Global Reset &amp; Font Configuration */
+    * {
+      box-sizing: border-box;
+      font-family: &#x27;Montserrat&#x27;, sans-serif;
+    }
+
+    body {
+      font-family: &#x27;Montserrat&#x27;, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      margin: 0;
+      padding: 12px;
+    }
+
+    /* Ensure form elements and controls inherit Montserrat font */
+    input, select, textarea, button {
+      font-family: &#x27;Montserrat&#x27;, sans-serif;
+    }
+
+    .app-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Minimal Header Container */
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+
+    .header-left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-logo {
+      max-height: 34px;
+      max-width: 90px;
+      object-fit: contain;
+    }
+
+    /* Restored original header size (36px) */
+    .header-left h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0;
+    }
+
+    .header-center {
+      flex: 1.5;
+      text-align: center;
+    }
+
+    .header-center h1 {
+      font-size: 14px;
+      color: #334155;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .header-right {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
+    .info-row label {
+      font-weight: 500;
+      font-size: 11px;
+      color: #64748b;
+      white-space: nowrap;
+    }
+
+    .info-row input {
+      width: 120px;
+      padding: 4px 6px;
+      font-size: 11px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      outline: none;
+      background-color: #ffffff;
+      color: #1e293b;
+    }
+
+    .info-row input:focus {
+      border-color: #3b82f6;
+    }
+
+    /* Minimal Collapsible Section Headers */
+    .section-header {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 6px 10px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #e2e8f0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .section-header-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .toggle-icon {
+      font-size: 10px;
+      transition: transform 0.2s ease;
+      color: #64748b;
+    }
+
+    .collapsed .toggle-icon {
+      transform: rotate(-90deg);
+    }
+
+    .section-content {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .section-content.is-hidden {
+      display: none !important;
+    }
+
+    .btn-add-row {
+      background: #ffffff;
+      color: #2563eb;
+      border: 1px solid #cbd5e1;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-add-row:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+
+    /* Minimal Table Inputs Base Styling */
+    .table-responsive {
+      width: 100%;
+      margin-bottom: 4px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 4px 6px;
+    }
+
+    th {
+      background-color: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .align-left { text-align: left; }
+    .align-center { text-align: center; }
+    .align-right { text-align: right; }
+
+    table input, table select, table textarea {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      font-size: 12px;
+      color: #1e293b;
+      outline: none;
+      padding: 4px 6px;
+      border-radius: 4px;
+      height: 30px;
+      box-sizing: border-box;
+    }
+
+    table input::placeholder {
+      color: #94a3b8;
+    }
+
+    table input:focus, table select:focus, table textarea:focus {
+      border-color: #3b82f6;
+    }
+
+    /* Red Minimal Delete Button */
+    .btn-del-row {
+      color: #ef4444;
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 13px;
+      padding: 0;
+      border-radius: 4px;
+      height: 30px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-del-row:hover {
+      background: #fee2e2;
+    }
+
+    .total-row {
+      font-weight: 600;
+      background-color: #f8fafc !important;
+      font-size: 12px;
+      color: #0f172a;
+    }
+
+    .notes-box {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin-top: 2px;
+      outline: none;
+      resize: vertical;
+      color: #1e293b;
+    }
+
+    /* Actions Bar */
+    .actions-bar-bottom {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      align-items: center;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid #e2e8f0;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 6px 14px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary { background-color: #0f172a; color: #ffffff; }
+    .btn-primary:hover { background-color: #1e293b; }
+
+    .btn-secondary { background-color: #ffffff; color: #334155; border: 1px solid #cbd5e1; }
+    .btn-secondary:hover { background-color: #f8fafc; }
+
+    .btn-danger { background-color: #fef2f2; color: #dc2626; border: 1px solid #fca5a5; }
+    .btn-danger:hover { background-color: #fee2e2; }
+
+    .btn-share { background-color: #16a34a; color: #ffffff; }
+    .btn-share:hover { background-color: #15803d; }
+
+    /* Minimal Mobile Responsive Layout */
+    @media screen and (max-width: 768px) {
+      body { padding: 4px; }
+      .app-container { padding: 8px; }
+
+      .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 8px;
+      }
+
+      .header-left { justify-content: center; }
+      .header-right { width: 100%; }
+      .info-row { justify-content: space-between; }
+      .info-row input { flex: 1; max-width: 60%; }
+
+      table, thead, tbody, th, td, tr { display: block; }
+      thead tr { position: absolute; top: -9999px; left: -9999px; }
+
+      /* General Table Rows Base Mobile Container (Minimized Padding) */
+      tbody tr {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        padding: 6px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+      }
+
+      td {
+        border: none;
+        position: relative;
+        padding: 2px 0 2px 40%;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 38%;
+        text-align: left;
+        font-weight: 600;
+        font-size: 10px;
+        color: #64748b;
+        text-transform: uppercase;
+      }
+
+      /* Section 1 Custom Mobile Layout */
+      #tracker-body tr {
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        gap: 4px;
+        padding: 6px;
+      }
+      #tracker-body td { padding: 0; display: block; }
+      #tracker-body td::before { display: none; }
+      #tracker-body td:nth-child(1) { grid-column: span 20; }
+      #tracker-body td:nth-child(2) { grid-column: span 10; }
+      #tracker-body td:nth-child(3) { grid-column: span 10; }
+      #tracker-body td:nth-child(4) { grid-column: span 19; }
+      #tracker-body td:nth-child(5) {
+        grid-column: span 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #tracker-body td:nth-child(5) .btn-del-row {
+        width: 100%;
+        min-width: 28px;
+        height: 30px;
+      }
+
+      /* Section 2 (Material Orders) Custom Mobile Layout */
+      #orders-body tr {
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        gap: 4px;
+        padding: 6px;
+      }
+      #orders-body td { padding: 0; display: block; }
+      #orders-body td::before { display: none; }
+      #orders-body td:nth-child(1) { grid-column: span 15; order: 1; }
+      #orders-body td:nth-child(3) { grid-column: span 5; order: 2; }
+      #orders-body td:nth-child(2) { grid-column: span 15; order: 3; }
+      #orders-body td:nth-child(4) { grid-column: span 5; order: 4; }
+      #orders-body td:nth-child(5) { grid-column: span 19; order: 5; }
+      #orders-body td:nth-child(6) {
+        grid-column: span 1;
+        order: 6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #orders-body td:nth-child(6) .btn-del-row {
+        width: 100%;
+        min-width: 28px;
+        height: 30px;
+      }
+
+      /* Section 3 Expenses Mobile Layout */
+      #expenses-body tr {
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        gap: 4px;
+        padding: 6px;
+      }
+      #expenses-body td { padding: 0; display: block; }
+      #expenses-body td::before { display: none; }
+      
+      /* Row 1: Paid To / Vendor (100% -&gt; 20 cols) */
+      #expenses-body td:nth-child(1) { grid-column: span 20; order: 1; }
+      
+      /* Row 2: Amount Today (50% -&gt; 10 cols) &amp; Payment Mode (50% -&gt; 10 cols) */
+      #expenses-body td:nth-child(4) { grid-column: span 10; order: 2; }
+      #expenses-body td:nth-child(3) { grid-column: span 10; order: 3; }
+      
+      /* Row 3: Purpose / Category (95% -&gt; 19 cols) &amp; Close Button (5% -&gt; 1 col) */
+      #expenses-body td:nth-child(2) { grid-column: span 19; order: 4; }
+      #expenses-body td:nth-child(5) {
+        grid-column: span 1;
+        order: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #expenses-body td:nth-child(5) .btn-del-row {
+        width: 100%;
+        min-width: 28px;
+        height: 30px;
+      }
+
+      /* Single-line Footer Total Layout for Mobile */
+      tfoot tr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 6px 10px;
+        margin-top: 4px;
+      }
+      tfoot td {
+        padding: 0;
+        border: none;
+        display: inline-block;
+        white-space: nowrap !important;
+        font-size: 12px;
+        font-weight: 600;
+        color: #0f172a;
+      }
+      tfoot td::before { display: none !important; }
+      tfoot td.action-col { display: none !important; }
+
+      .actions-bar-bottom { flex-direction: column-reverse; gap: 6px; }
+      .btn { width: 100%; }
+    }
+
+    /* Print Style Overrides */
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .app-container { box-shadow: none; border: none; padding: 0; max-width: 100%; }
+      .actions-bar-bottom, .btn-add-row, .btn-del-row, .action-col, .toggle-icon { display: none !important; }
+      .section-content.is-hidden { display: block !important; }
+      .table-responsive { overflow-x: visible; border: none; }
+      table { min-width: 100%; display: table !important; }
+      thead { display: table-header-group !important; }
+      tbody { display: table-row-group !important; }
+      tr { display: table-row !important; }
+      th, td { display: table-cell !important; padding: 4px 6px; }
+      td::before { display: none; }
+      th, .section-header { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      table input, table select, table textarea { border: none; }
+      .header-container { border: 1px solid #000; box-shadow: none; flex-direction: row !important; }
+      .info-row input { border: none; border-bottom: 1px solid #000; border-radius: 0; }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+  &lt;div class=&quot;app-container&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+      &lt;div class=&quot;header-left&quot;&gt;
+        &lt;h1&gt;ID+EA&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;header-center&quot;&gt;
+        &lt;h1&gt;Daily Site Report&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;header-right&quot;&gt;
+        &lt;div class=&quot;info-row&quot;&gt;
+          &lt;label for=&quot;report-date&quot;&gt;Date:&lt;/label&gt;
+          &lt;input type=&quot;date&quot; id=&quot;report-date&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;info-row&quot;&gt;
+          &lt;label for=&quot;project-name&quot;&gt;Project:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;project-name&quot; placeholder=&quot;Site Name&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;info-row&quot;&gt;
+          &lt;label for=&quot;supervisor&quot;&gt;Supervisor:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;supervisor&quot; placeholder=&quot;Supervisor Name&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-header&quot; onclick=&quot;toggleSection(&#x27;sec1-content&#x27;, this)&quot;&gt;
+      &lt;div class=&quot;section-header-left&quot;&gt;
+        &lt;span class=&quot;toggle-icon&quot;&gt;▼&lt;/span&gt;
+        &lt;span&gt;1. Daily Site Operations Log&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;btn-add-row&quot; onclick=&quot;event.stopPropagation(); addRow(&#x27;tracker-body&#x27;, 1)&quot;&gt;+ Add Item&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;sec1-content&quot; class=&quot;section-content&quot;&gt;
+      &lt;div class=&quot;table-responsive&quot;&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th class=&quot;align-left&quot; style=&quot;width: 40%;&quot;&gt;Operation / Work Item&lt;/th&gt;
+              &lt;th class=&quot;align-center&quot; style=&quot;width: 15%;&quot;&gt;Workforce Count&lt;/th&gt;
+              &lt;th class=&quot;align-right&quot; style=&quot;width: 20%;&quot;&gt;Cost Today (₹)&lt;/th&gt;
+              &lt;th class=&quot;align-left&quot; style=&quot;width: 20%;&quot;&gt;Notes / Remarks&lt;/th&gt;
+              &lt;th class=&quot;action-col&quot; style=&quot;width: 5%;&quot;&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody id=&quot;tracker-body&quot;&gt;&lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr class=&quot;total-row&quot;&gt;
+              &lt;td colspan=&quot;2&quot; class=&quot;align-right&quot;&gt;Total Operations Cost:&lt;/td&gt;
+              &lt;td class=&quot;align-right&quot; id=&quot;total-ops-amount&quot;&gt;₹0.00&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt;
+              &lt;td class=&quot;action-col&quot;&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-header&quot; onclick=&quot;toggleSection(&#x27;sec2-content&#x27;, this)&quot;&gt;
+      &lt;div class=&quot;section-header-left&quot;&gt;
+        &lt;span class=&quot;toggle-icon&quot;&gt;▼&lt;/span&gt;
+        &lt;span&gt;2. Material Orders&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;btn-add-row&quot; onclick=&quot;event.stopPropagation(); addRow(&#x27;orders-body&#x27;, 2)&quot;&gt;+ Add Material&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;sec2-content&quot; class=&quot;section-content&quot;&gt;
+      &lt;div class=&quot;table-responsive&quot;&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th class=&quot;align-left&quot; style=&quot;width: 30%;&quot;&gt;Material Description&lt;/th&gt;
+              &lt;th class=&quot;align-left&quot; style=&quot;width: 25%;&quot;&gt;Supplier / Vendor&lt;/th&gt;
+              &lt;th class=&quot;align-center&quot; style=&quot;width: 15%;&quot;&gt;Quantity&lt;/th&gt;
+              &lt;th class=&quot;align-center&quot; style=&quot;width: 12%;&quot;&gt;Status&lt;/th&gt;
+              &lt;th class=&quot;align-right&quot; style=&quot;width: 13%;&quot;&gt;Est. Cost (₹)&lt;/th&gt;
+              &lt;th class=&quot;action-col&quot; style=&quot;width: 5%;&quot;&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody id=&quot;orders-body&quot;&gt;&lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr class=&quot;total-row&quot;&gt;
+              &lt;td colspan=&quot;4&quot; class=&quot;align-right&quot;&gt;Total Material Cost:&lt;/td&gt;
+              &lt;td class=&quot;align-right&quot; id=&quot;total-materials-cost&quot;&gt;₹0.00&lt;/td&gt;
+              &lt;td class=&quot;action-col&quot;&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-header&quot; onclick=&quot;toggleSection(&#x27;sec3-content&#x27;, this)&quot;&gt;
+      &lt;div class=&quot;section-header-left&quot;&gt;
+        &lt;span class=&quot;toggle-icon&quot;&gt;▼&lt;/span&gt;
+        &lt;span&gt;3. Daily Expenses &amp; Petty Cash&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;btn-add-row&quot; onclick=&quot;event.stopPropagation(); addRow(&#x27;expenses-body&#x27;, 3)&quot;&gt;+ Add Expense&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;sec3-content&quot; class=&quot;section-content&quot;&gt;
+      &lt;div class=&quot;table-responsive&quot;&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th class=&quot;align-left&quot; style=&quot;width: 30%;&quot;&gt;Paid To / Vendor&lt;/th&gt;
+              &lt;th class=&quot;align-left&quot; style=&quot;width: 30%;&quot;&gt;Purpose / Category&lt;/th&gt;
+              &lt;th class=&quot;align-center&quot; style=&quot;width: 15%;&quot;&gt;Payment Mode&lt;/th&gt;
+              &lt;th class=&quot;align-right&quot; style=&quot;width: 20%;&quot;&gt;Amount Today (₹)&lt;/th&gt;
+              &lt;th class=&quot;action-col&quot; style=&quot;width: 5%;&quot;&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody id=&quot;expenses-body&quot;&gt;&lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr class=&quot;total-row&quot;&gt;
+              &lt;td colspan=&quot;3&quot; class=&quot;align-right&quot;&gt;Total Expenses Today:&lt;/td&gt;
+              &lt;td class=&quot;align-right&quot; id=&quot;total-expenses-amount&quot;&gt;₹0.00&lt;/td&gt;
+              &lt;td class=&quot;action-col&quot;&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-header&quot; onclick=&quot;toggleSection(&#x27;sec4-content&#x27;, this)&quot;&gt;
+      &lt;div class=&quot;section-header-left&quot;&gt;
+        &lt;span class=&quot;toggle-icon&quot;&gt;▼&lt;/span&gt;
+        &lt;span&gt;4. Daily Remarks, Delays &amp; Safety Notes&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;sec4-content&quot; class=&quot;section-content&quot;&gt;
+      &lt;textarea id=&quot;general-notes&quot; class=&quot;notes-box&quot; rows=&quot;3&quot; placeholder=&quot;Enter site issues, work delays, safety inspections, or instructions for tomorrow...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;actions-bar-bottom&quot;&gt;
+      &lt;button class=&quot;btn btn-danger&quot; onclick=&quot;clearForm()&quot;&gt;Clear Sheet&lt;/button&gt;
+      &lt;button class=&quot;btn btn-secondary&quot; onclick=&quot;window.print()&quot;&gt;Export / Print PDF&lt;/button&gt;
+      &lt;button class=&quot;btn btn-share&quot; onclick=&quot;shareSummaryReport()&quot;&gt;Share Summary&lt;/button&gt;
+      &lt;button class=&quot;btn btn-primary&quot; onclick=&quot;saveData()&quot;&gt;Save Progress&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    // Toggle Collapsible Sections
+    function toggleSection(id, headerElem) {
+      const content = document.getElementById(id);
+      content.classList.toggle(&#x27;is-hidden&#x27;);
+      headerElem.classList.toggle(&#x27;collapsed&#x27;);
+    }
+
+    // Format Number to INR Currency (₹)
+    function formatCurrency(amount) {
+      return new Intl.NumberFormat(&#x27;en-IN&#x27;, {
+        style: &#x27;currency&#x27;,
+        currency: &#x27;INR&#x27;,
+        minimumFractionDigits: 2
+      }).format(amount);
+    }
+
+    // Dynamic Row Addition
+    function addRow(tbodyId, sectionType, values = null) {
+      const tbody = document.getElementById(tbodyId);
+      const tr = document.createElement(&#x27;tr&#x27;);
+
+      if (sectionType === 1) {
+        tr.innerHTML = `
+          &lt;td data-label=&quot;Operation&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Name / Work Item&quot;&gt;&lt;/td&gt;
+          &lt;td data-label=&quot;Workforce&quot;&gt;&lt;input type=&quot;text&quot; class=&quot;align-center&quot; placeholder=&quot;Count&quot;&gt;&lt;/td&gt;
+          &lt;td data-label=&quot;Cost (₹)&quot;&gt;&lt;input type=&quot;number&quot; class=&quot;align-right calc-ops&quot; placeholder=&quot;Amount(₹)&quot; oninput=&quot;calculateTotals()&quot;&gt;&lt;/td&gt;
+          &lt;td data-label=&quot;Notes&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Notes/Remarks&quot;&gt;&lt;/td&gt;
+          &lt;td class=&quot;action-col&quot;&gt;&lt;button class=&quot;btn-del-row&quot; onclick=&quot;deleteRow(this)&quot;&gt;✕&lt;/button&gt;&lt;/td&gt;
+        `;
+      } else if (sectionType === 2) {
+        tr.innerHTML = `
+          &lt;td data-label=&quot;Material&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Material Description&quot;&gt;&lt;/td&gt;
+          &lt;td data-label=&quot;Supplier&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Vendor&quot;&gt;&lt;/td&gt;
+          &lt;td data-label=&quot;Quantity&quot;&gt;&lt;input type=&quot;text&quot; class=&quot;align-center&quot; placeholder=&quot;Quantity&quot;&gt;&lt;/td&gt;
+          &lt;td data-label=&quot;Status&quot;&gt;
+            &lt;select&gt;
+              &lt;option value=&quot;Ordered&quot;&gt;Ordered&lt;/option&gt;
+              &lt;option value=&quot;Delivered&quot;&gt;Delivered&lt;/option&gt;
+              &lt;option value=&quot;Pending&quot;&gt;Pending&lt;/option&gt;
+              &lt;option value=&quot;Cancelled&quot;&gt;Cancelled&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+          &lt;td data-label=&quot;Est. Cost (₹)&quot;&gt;&lt;input type=&quot;number&quot; class=&quot;align-right calc-materials&quot; placeholder=&quot;Est.Cost(₹)&quot; oninput=&quot;calculateTotals()&quot;&gt;&lt;/td&gt;
+          &lt;td class=&quot;action-col&quot;&gt;&lt;button class=&quot;btn-del-row&quot; onclick=&quot;deleteRow(this)&quot;&gt;✕&lt;/button&gt;&lt;/td&gt;
+        `;
+      } else if (sectionType === 3) {
+        tr.innerHTML = `
+          &lt;td data-label=&quot;Paid To&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Paid To/ Vendor&quot;&gt;&lt;/td&gt;
+          &lt;td data-label=&quot;Purpose&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Purpose / Expense Category&quot;&gt;&lt;/td&gt;
+          &lt;td data-label=&quot;Payment Mode&quot;&gt;
+            &lt;select&gt;
+              &lt;option value=&quot;Cash&quot;&gt;Cash&lt;/option&gt;
+              &lt;option value=&quot;UPI / GPay&quot;&gt;UPI / GPay&lt;/option&gt;
+              &lt;option value=&quot;Bank Transfer&quot;&gt;Bank Transfer&lt;/option&gt;
+              &lt;option value=&quot;Cheque&quot;&gt;Cheque&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+          &lt;td data-label=&quot;Amount Today (₹)&quot;&gt;&lt;input type=&quot;number&quot; class=&quot;align-right calc-expenses&quot; placeholder=&quot;Amount(₹)&quot; oninput=&quot;calculateTotals()&quot;&gt;&lt;/td&gt;
+          &lt;td class=&quot;action-col&quot;&gt;&lt;button class=&quot;btn-del-row&quot; onclick=&quot;deleteRow(this)&quot;&gt;✕&lt;/button&gt;&lt;/td&gt;
+        `;
+      }
+
+      tbody.appendChild(tr);
+
+      if (values) {
+        const inputs = tr.querySelectorAll(&#x27;input, select&#x27;);
+        inputs.forEach((input, index) =&gt; {
+          if (values[index] !== undefined) {
+            input.value = values[index];
+          }
+        });
+      }
+    }
+
+    // Dynamic Row Deletion
+    function deleteRow(btn) {
+      const row = btn.closest(&#x27;tr&#x27;);
+      row.parentNode.removeChild(row);
+      calculateTotals();
+    }
+
+    // Automatic Calculations with Formatted Currency Outputs
+    function calculateTotals() {
+      let opsTotal = 0;
+      document.querySelectorAll(&#x27;.calc-ops&#x27;).forEach(input =&gt; {
+        opsTotal += parseFloat(input.value) || 0;
+      });
+      document.getElementById(&#x27;total-ops-amount&#x27;).innerText = formatCurrency(opsTotal);
+
+      let matTotal = 0;
+      document.querySelectorAll(&#x27;.calc-materials&#x27;).forEach(input =&gt; {
+        matTotal += parseFloat(input.value) || 0;
+      });
+      document.getElementById(&#x27;total-materials-cost&#x27;).innerText = formatCurrency(matTotal);
+
+      let expTotal = 0;
+      document.querySelectorAll(&#x27;.calc-expenses&#x27;).forEach(input =&gt; {
+        expTotal += parseFloat(input.value) || 0;
+      });
+      document.getElementById(&#x27;total-expenses-amount&#x27;).innerText = formatCurrency(expTotal);
+    }
+
+    // Generate Formatted Summarized Report Text
+    function generateSummaryText() {
+      const date = document.getElementById(&#x27;report-date&#x27;).value || &#x27;N/A&#x27;;
+      const project = document.getElementById(&#x27;project-name&#x27;).value || &#x27;Unspecified Site&#x27;;
+      const supervisor = document.getElementById(&#x27;supervisor&#x27;).value || &#x27;N/A&#x27;;
+      const notes = document.getElementById(&#x27;general-notes&#x27;).value.trim();
+
+      let summary = `📋 ID+EA DAILY SITE REPORT\n`;
+      summary += `------------------------------------\n`;
+      summary += `🏗️ Project: ${project}\n`;
+      summary += `📅 Date: ${date}\n`;
+      summary += `👤 Supervisor: ${supervisor}\n\n`;
+
+      // 1. Site Operations Summary
+      summary += `👷 1. SITE OPERATIONS\n`;
+      const opsRows = document.querySelectorAll(&#x27;#tracker-body tr&#x27;);
+      let opsCount = 0;
+      opsRows.forEach(row =&gt; {
+        const inputs = row.querySelectorAll(&#x27;input&#x27;);
+        const item = inputs[0]?.value.trim();
+        const count = inputs[1]?.value.trim();
+        const amt = parseFloat(inputs[2]?.value.trim());
+        const rem = inputs[3]?.value.trim();
+
+        if (item || !isNaN(amt)) {
+          opsCount++;
+          summary += `  • ${item || &#x27;Work Item&#x27;}: ${count ? count + &#x27; workers&#x27; : &#x27;&#x27;}${!isNaN(amt) ? &#x27; | &#x27; + formatCurrency(amt) : &#x27;&#x27;}${rem ? &#x27; (&#x27; + rem + &#x27;)&#x27; : &#x27;&#x27;}\n`;
+        }
+      });
+      if (opsCount === 0) summary += `  • No items logged\n`;
+      summary += `  Total Operations: ${document.getElementById(&#x27;total-ops-amount&#x27;).innerText}\n\n`;
+
+      // 2. Materials Summary
+      summary += `📦 2. MATERIAL ORDERS\n`;
+      const matRows = document.querySelectorAll(&#x27;#orders-body tr&#x27;);
+      let matCount = 0;
+      matRows.forEach(row =&gt; {
+        const inputs = row.querySelectorAll(&#x27;input, select&#x27;);
+        const mat = inputs[0]?.value.trim();
+        const supplier = inputs[1]?.value.trim();
+        const qty = inputs[2]?.value.trim();
+        const status = inputs[3]?.value;
+        const cost = parseFloat(inputs[4]?.value.trim());
+
+        if (mat || !isNaN(cost)) {
+          matCount++;
+          summary += `  • ${mat || &#x27;Material&#x27;}${supplier ? &#x27; (&#x27; + supplier + &#x27;)&#x27; : &#x27;&#x27;}: ${qty || &#x27;&#x27;} [${status}]${!isNaN(cost) ? &#x27; | &#x27; + formatCurrency(cost) : &#x27;&#x27;}\n`;
+        }
+      });
+      if (matCount === 0) summary += `  • No items logged\n`;
+      summary += `  Total Material Cost: ${document.getElementById(&#x27;total-materials-cost&#x27;).innerText}\n\n`;
+
+      // 3. Expenses Summary
+      summary += `💸 3. DAILY EXPENSES\n`;
+      const expRows = document.querySelectorAll(&#x27;#expenses-body tr&#x27;);
+      let expCount = 0;
+      expRows.forEach(row =&gt; {
+        const inputs = row.querySelectorAll(&#x27;input, select&#x27;);
+        const paidTo = inputs[0]?.value.trim();
+        const purpose = inputs[1]?.value.trim();
+        const mode = inputs[2]?.value;
+        const amt = parseFloat(inputs[3]?.value.trim());
+
+        if (paidTo || purpose || !isNaN(amt)) {
+          expCount++;
+          summary += `  • ${paidTo || &#x27;Vendor&#x27;} - ${purpose || &#x27;Expense&#x27;}: ${formatCurrency(amt || 0)} (${mode})\n`;
+        }
+      });
+      if (expCount === 0) summary += `  • No items logged\n`;
+      summary += `  Total Daily Expenses: ${document.getElementById(&#x27;total-expenses-amount&#x27;).innerText}\n\n`;
+
+      // 4. Remarks
+      if (notes) {
+        summary += `📝 REMARKS &amp; SAFETY NOTES\n`;
+        summary += `${notes}\n\n`;
+      }
+
+      summary += `------------------------------------\n`;
+      summary += `Generated via ID+EA Site Manager`;
+
+      return summary;
+    }
+
+    // Share Summary Function
+    async function shareSummaryReport() {
+      const summaryText = generateSummaryText();
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: &#x27;ID+EA Daily Site Report&#x27;,
+            text: summaryText
+          });
+        } catch (err) {
+          if (err.name !== &#x27;AbortError&#x27;) {
+            copyToClipboard(summaryText);
+          }
+        }
+      } else {
+        copyToClipboard(summaryText);
+      }
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() =&gt; {
+        alert(&quot;Summarized report copied to clipboard!\n\nYou can now paste and send it directly in WhatsApp, SMS, or Email.&quot;);
+      }).catch(err =&gt; {
+        console.error(&#x27;Could not copy text: &#x27;, err);
+        alert(&quot;Unable to copy summary automatically. Please select and copy manually.&quot;);
+      });
+    }
+
+    // Save &amp; Restore Data
+    function saveData() {
+      const data = {
+        meta: {
+          date: document.getElementById(&#x27;report-date&#x27;).value,
+          project: document.getElementById(&#x27;project-name&#x27;).value,
+          supervisor: document.getElementById(&#x27;supervisor&#x27;).value,
+          notes: document.getElementById(&#x27;general-notes&#x27;).value
+        },
+        ops: serializeSection(&#x27;tracker-body&#x27;),
+        orders: serializeSection(&#x27;orders-body&#x27;),
+        expenses: serializeSection(&#x27;expenses-body&#x27;)
+      };
+
+      localStorage.setItem(&#x27;tkc_daily_work_update_data&#x27;, JSON.stringify(data));
+      alert(&#x27;Daily update sheet saved successfully!&#x27;);
+    }
+
+    function serializeSection(bodyId) {
+      const rows = document.querySelectorAll(`#${bodyId} tr`);
+      const sectionData = [];
+      rows.forEach(tr =&gt; {
+        const rowValues = [];
+        tr.querySelectorAll(&#x27;input, select&#x27;).forEach(input =&gt; {
+          rowValues.push(input.value);
+        });
+        sectionData.push(rowValues);
+      });
+      return sectionData;
+    }
+
+    function loadData() {
+      const saved = localStorage.getItem(&#x27;tkc_daily_work_update_data&#x27;);
+      if (saved) {
+        const data = JSON.parse(saved);
+        if (data.meta) {
+          if (data.meta.date) document.getElementById(&#x27;report-date&#x27;).value = data.meta.date;
+          document.getElementById(&#x27;project-name&#x27;).value = data.meta.project || &#x27;&#x27;;
+          document.getElementById(&#x27;supervisor&#x27;).value = data.meta.supervisor || &#x27;&#x27;;
+          document.getElementById(&#x27;general-notes&#x27;).value = data.meta.notes || &#x27;&#x27;;
+        }
+
+        document.getElementById(&#x27;tracker-body&#x27;).innerHTML = &#x27;&#x27;;
+        if (data.ops &amp;&amp; data.ops.length &gt; 0) {
+          data.ops.forEach(rowVals =&gt; addRow(&#x27;tracker-body&#x27;, 1, rowVals));
+        } else {
+          addRow(&#x27;tracker-body&#x27;, 1);
+        }
+
+        document.getElementById(&#x27;orders-body&#x27;).innerHTML = &#x27;&#x27;;
+        if (data.orders &amp;&amp; data.orders.length &gt; 0) {
+          data.orders.forEach(rowVals =&gt; addRow(&#x27;orders-body&#x27;, 2, rowVals));
+        } else {
+          addRow(&#x27;orders-body&#x27;, 2);
+        }
+
+        document.getElementById(&#x27;expenses-body&#x27;).innerHTML = &#x27;&#x27;;
+        if (data.expenses &amp;&amp; data.expenses.length &gt; 0) {
+          data.expenses.forEach(rowVals =&gt; addRow(&#x27;expenses-body&#x27;, 3, rowVals));
+        } else {
+          addRow(&#x27;expenses-body&#x27;, 3);
+        }
+
+        calculateTotals();
+      } else {
+        addRow(&#x27;tracker-body&#x27;, 1);
+        addRow(&#x27;orders-body&#x27;, 2);
+        addRow(&#x27;expenses-body&#x27;, 3);
+      }
+    }
+
+    function clearForm() {
+      if (confirm(&#x27;Are you sure you want to clear the entire form?&#x27;)) {
+        localStorage.removeItem(&#x27;tkc_daily_work_update_data&#x27;);
+        location.reload();
+      }
+    }
+
+    window.onload = loadData;
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" style="width:100%;height:1250px;border:1px solid #e8e8e8;border-radius:20px;background:#f8fafc;box-shadow:0 10px 30px rgba(0,0,0,.06);" loading="lazy"></iframe>
     </div>
   </section>
 
   <footer>
-    <div class="container footer-grid"><div><img class="footer-logo" src="assets/idea-logo.png" alt="ID+EA logo"><p>ID+EA is a tech-enabled construction company providing architecture, construction, interiors, project management and digital project tracking services.</p></div><div><h4>Quick Links</h4><div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#tracking">Tech Tracking</a><a href="reports.html">Reports</a><a href="#contact">Contact</a></div></div><div><h4>Core Services</h4><div class="footer-links"><span>Architecture & Design</span><span>Residential Construction</span><span>Commercial Construction</span><span>PMC</span><span>Interiors</span><span>Digital Project Tracking</span></div></div><div><h4>Contact</h4><div class="footer-links"><a href="tel:+919951929950">+91-9951929950</a><a target="_blank" rel="noreferrer" href="https://wa.me/919951929950?text=Hello%20ID%2BEA%2C%20I%20would%20like%20to%20discuss%20my%20construction%20project.">WhatsApp ID+EA</a><a href="mailto:ideadesignbuild@gmail.com">ideadesignbuild@gmail.com</a><span>Nu Symphony Apartment, Flat No. 102, Visakhapatnam, Andhra Pradesh</span></div></div></div>
+    <div class="container footer-grid"><div><img class="footer-logo" src="assets/idea-logo.png" alt="ID+EA logo"><p>ID+EA is a tech-enabled construction company providing architecture, construction, interiors, project management and digital project tracking services.</p></div><div><h4>Quick Links</h4><div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#tracking">Tech Tracking</a><a href="#reports">Reports</a><a href="#contact">Contact</a></div></div><div><h4>Core Services</h4><div class="footer-links"><span>Architecture & Design</span><span>Residential Construction</span><span>Commercial Construction</span><span>PMC</span><span>Interiors</span><span>Digital Project Tracking</span></div></div><div><h4>Contact</h4><div class="footer-links"><a href="tel:+919951929950">+91-9951929950</a><a target="_blank" rel="noreferrer" href="https://wa.me/919951929950?text=Hello%20ID%2BEA%2C%20I%20would%20like%20to%20discuss%20my%20construction%20project.">WhatsApp ID+EA</a><a href="mailto:ideadesignbuild@gmail.com">ideadesignbuild@gmail.com</a><span>Nu Symphony Apartment, Flat No. 102, Visakhapatnam, Andhra Pradesh</span></div></div></div>
     <div class="container copyright"><span>©️ 2026 ID+EA. All rights reserved.</span><span>Design. Build. Track. Deliver.</span></div>
   </footer>
 
